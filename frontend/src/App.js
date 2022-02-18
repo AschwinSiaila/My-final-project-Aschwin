@@ -11,8 +11,7 @@ import Login from "./pages/Login";
 import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
 import Recipes from "./pages/Recipes";
-import Settings from "./components/Settings";
-// import Footer from "./components/Footer";
+import Settings from "./pages/Settings";
 import Create from "./pages/Create";
 
 import user from "./reducers/user";

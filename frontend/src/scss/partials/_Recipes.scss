@@ -1,0 +1,22 @@
+.recipes-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-gap: 1.5em;
+    padding:5px
+}
+
+
+.recipeCard {
+  isolation: isolate;
+  width: 260px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px var(--shadow-color);
+  background-color: rgba(24, 24, 24, 0.796);
+  padding: 50px 35px;
+  span {
+    color: var(--text-color);
+  }
+}
+
+

@@ -4,12 +4,11 @@ import { useNavigate } from "react-router-dom";
 
 import { useState } from "react";
 import Sidebar from "./Sidebar";
-import { Button } from "./lib/Button";
 import user from "../reducers/user";
 
 import { faHome, faList, faCog, faUtensils } from "@fortawesome/free-solid-svg-icons";
 
-export default function Navbar() {
+const Navbar = () => {
   const [showSidebar, setShowSidebar] = useState(false);
   const location = useLocation();
 
@@ -51,7 +50,7 @@ export default function Navbar() {
   return (
     <>
       <div className="navbar container">
-        <Button logoutbutton={true} buttonText="Log out" onClickFunction={logOut} />
+        <button className="logOutButton" onClick={logOut}>Log out</button>
         <Link to="/" className="logo">
           Aschwin's<span>Recipe</span>App
         </Link>
@@ -62,14 +61,15 @@ export default function Navbar() {
             </Link>
           ))}
         </div>
-        <div onClick={() => setShowSidebar(true)} className={showSidebar ? "sidebar-btn active" : "sidebar-btn"}>
+        <div onClick={() => setShowSidebar(!showSidebar)} className={showSidebar ? "sidebar-btn active" : "sidebar-btn"}>
           <div className="bar"></div>
           <div className="bar"></div>
           <div className="bar"></div>
-          {/* <div className="bar"></div> */}
         </div>
       </div>
       {showSidebar && <Sidebar close={closeSidebar} links={links} />}
     </>
   );
-}
+};
+
+export default Navbar;

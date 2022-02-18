@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link, useLocation } from "react-router-dom";
 
-export default function Sidebar({ links, close }) {
+const Sidebar = ({ links, close }) => {
   const location = useLocation();
   return (
     <div className="sidebar" onClick={close}>
@@ -13,4 +13,6 @@ export default function Sidebar({ links, close }) {
       ))}
     </div>
   );
-}
+};
+
+export default Sidebar;

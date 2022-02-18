@@ -6,7 +6,6 @@ import { API_URL } from "../utils/url";
 import recipes from "../reducers/user";
 import HeroSection from "../components/HeroSection";
 import Footer from "../components/Footer";
-// import { Button } from "../components/lib/Button"
 
 const Main = () => {
   // const recipesItems = useSelector((store) => store.recipes.items);

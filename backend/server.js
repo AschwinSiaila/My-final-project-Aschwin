@@ -4,6 +4,7 @@ import mongoose from "mongoose";
 import crypto from "crypto";
 import bcrypt from "bcrypt";
 
+
 const mongoUrl = process.env.MONGO_URL || "mongodb://localhost/Recipe-mongo";
 mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.Promise = Promise;
@@ -48,8 +49,6 @@ const RecipeSchema = new mongoose.Schema({
   },
   description: {
     type: String,
-    minlength: 5,
-    maxlength: 30,
     trim: true,
   },
   loves: {
@@ -58,7 +57,7 @@ const RecipeSchema = new mongoose.Schema({
   },
   level: {
     type: String,
-    // required: true,
+    required: true,
     enum: ["Easy", "Amateur Chef", "Pro Chef"],
   },
   ingredients: {
@@ -66,23 +65,20 @@ const RecipeSchema = new mongoose.Schema({
   },
   cuisine: {
     type: String,
-    // required: true,
+    required: true,
   },
-  dishType: {
+  dishtype: {
     type: String,
+    // required: true,
     enum: ["Breakfast", "Main_course", "Soup", "Snack", "Drink", "Desert", "Other"],
   },
-  image: {
-    imageName: {
-      type: String,
-    },
-    imageUrl: {
-      type: String,
-    },
-    // default: "https://images.media-allrecipes.com/images/75131.jpg",
+  image:  {
+    type: String,
+    required: true,
+    default: "../img/gallery/publish-recipe.png",
   },
   duration: {
-    type: Number,
+    type: String,
     min: 0,
   },
   creator: {
@@ -184,15 +180,17 @@ app.get("/recipes", async (req, res) => {
 });
 
 app.post("/recipes", async (req, res) => {
-  const { title, description, level, ingredients, cuisine, dishType, duration, creator, createdAt } = req.body;
+  const { title, description, level, ingredients, cuisine, dishtype, duration, creator, createdAt } = req.body;
 
   try {
-    const newRecipe = await new Recipe({ title, description, level, ingredients, cuisine, dishType, duration, creator, createdAt }).save();
+    const newRecipe = await new Recipe({ title, description, level, ingredients, cuisine, dishtype, duration, creator, createdAt }).save();
     res.status(201).json({ response: newRecipe, success: true });
   } catch (error) {
     res.status(400).json({ response: error, success: false });
   }
 });
+
+
 
 app.post("/recipes/:id/loves", async (req, res) => {
   const { id } = req.params;
@@ -232,9 +230,10 @@ app.patch("/recipes/:id", async (req, res) => {
       res.status(404).json({ response: "Recipe not found ", success: false });
     }
   } catch (error) {
-    res.status(400).json({ response: error, succes: false });
+    res.status(400).json({ response: error, succes: false });uploader
   }
 });
+
 
 // Start the server
 app.listen(port, () => {

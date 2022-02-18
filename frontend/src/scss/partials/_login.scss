@@ -23,9 +23,9 @@
 }
 
 form {
-  height: 560px;
+  height: 570px;
   width: 400px;
-  background-color: rgba(255, 255, 255, 0.13);
+  background-color: rgba(24, 24, 24, 0.796);
   position: absolute;
   transform: translate(-50%, -50%);
   top: 50%;
@@ -40,10 +40,10 @@ form {
 .recipeForm {
   height: auto;
   width: 400px;
-  background-color: rgba(255, 255, 255, 0.13);
+  background-color: rgba(24, 24, 24, 0.796);
   position: absolute;
   transform: translate(-50%, -50%);
-  top: 70%;
+  top: 86%;
   left: 80%;
   border-radius: 10px;
   backdrop-filter: blur(10px);
@@ -55,7 +55,7 @@ form {
 .uploadForm {
   height: auto;
   width: 400px;
-  background-color: rgba(255, 255, 255, 0.13);
+  background-color: rgba(24, 24, 24, 0.796);
   position: absolute;
   transform: translate(-50%, -50%);
   top: 70%;
@@ -69,7 +69,7 @@ form {
 
 * {
   font-family: "Poppins", sans-serif;
-  color: rgb(224, 193, 193);
+  color: var(--primary-color);
   letter-spacing: 0.5px;
   outline: none;
   border: none;
@@ -116,8 +116,10 @@ input[type="email"] {
 .sendButton {
   margin-top: 30px;
   width: 100%;
-  background-color: #ffffff;
-  color: #080710;
+  background: var(--primary-color);
+  color: var(--text-color);
+  // background-color: #ffffff;
+  // color: #080710;
   padding: 15px 0;
   font-size: 18px;
   font-weight: 600;

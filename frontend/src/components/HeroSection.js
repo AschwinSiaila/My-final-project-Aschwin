@@ -1,6 +1,7 @@
 import CustomImage from "./CustomImage";
+import { Link } from "react-router-dom";
 
-export default function HeroSection() {
+const HeroSection = () => {
   const images = [
     "/img/gallery/img_1.jpg",
     "/img/gallery/img_2.jpg",
@@ -15,9 +16,11 @@ export default function HeroSection() {
   return (
     <div className="section hero">
       <div className="col typography">
-        <h1 className="title">What Are We About</h1>
-        <p className="info">FoodiesHub is a place where you can please your soul and tummy with delicious food recepies of all cuisine. And our service is absolutely free. So start exploring now.</p>
-        <button className="btn">explore now</button>
+        <h1 className="title">What is this app about</h1>
+        <p className="info">This app is a place where you can please your soul and tummy with delicious food recepies of all cuisine. And our service is absolutely free. So start exploring now.</p>
+        <Link to={"/recipes"}>
+          <button className="btn">explore now </button>
+        </Link>
       </div>
       <div className="col gallery">
         {images.map((src, index) => (
@@ -26,4 +29,6 @@ export default function HeroSection() {
       </div>
     </div>
   );
-}
+};
+
+export default HeroSection;

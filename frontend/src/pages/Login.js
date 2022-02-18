@@ -8,8 +8,9 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import styled from "styled-components/macro";
 
 const EyeButton = styled.button`
-  background-color: white;
-  color: grey;
+  background-color: black;
+  color: white;
+  padding: 10px;
 
   :hover {
     color: blue;

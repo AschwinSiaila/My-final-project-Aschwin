@@ -7,7 +7,7 @@ export default function Settings() {
   const [settings, setSettings] = useState({
     "--background-color": "#fff",
     "--background-light": "#fff",
-    "--primary-color": "rgb(255, 0, 86)",
+    "--primary-color": "orange",
     "--shadow-color": "rgba(0,0,0,0.2)",
     "--text-color": "#0A0A0A",
     "--text-light": "#575757",
@@ -73,7 +73,7 @@ export default function Settings() {
     setSettings(_settings);
   }
 
-  const primaryColors = ["rgb(255, 0, 86)", "rgb(33, 150, 243)", "rgb(255, 193, 7)", "rgb(0, 200, 83)", "rgb(156, 39, 176)"];
+  const primaryColors = ["blue", "rgb(141, 143, 143)", "green", "red", "orange"];
   const fontSizes = [
     {
       title: "Small",

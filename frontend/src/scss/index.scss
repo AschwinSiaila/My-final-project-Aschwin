@@ -2,7 +2,7 @@
   --background-color: #fff;
   --background-light: #fff;
   --shadow-color: rgba(0, 0, 0, 0.2);
-  --primary-color: rgb(255, 0, 86);
+  --primary-color: orange;
   --text-color: #0a0a0a;
   --text-light: #575757;
   --font-size: 16px;
@@ -92,13 +92,8 @@ img {
 }
 
 @import "partials/hero-section.scss";
-@import "partials/improve-section.scss";
 @import "partials/login";
-@import "partials/dropdown.scss";
-// @import "partials/quote-section.scss";
-// @import "partials/chiefs-section.scss";
-// @import "partials/previous-searches.scss";
-// @import "partials/recipes-section.scss";
+@import "partials/recipes.scss";
 
 .options-container {
   box-shadow: 0 5px 10px var(--shadow-color);
@@ -197,6 +192,20 @@ img {
   }
   .chief-card {
     box-shadow: 0 5px 10px var(--shadow-color);
+  }
+  .recipeForm {
+    height: auto;
+    width: 400px;
+    background-color: rgba(24, 24, 24, 0.796);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 105%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+    padding: 50px 35px;
   }
   .container {
     padding-inline: 6vw;
