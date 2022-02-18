@@ -13,6 +13,7 @@ const HeroSection = () => {
     "/img/gallery/img_8.jpg",
     "/img/gallery/img_9.jpg",
   ];
+  
   return (
     <div className="section hero">
       <div className="col typography">
