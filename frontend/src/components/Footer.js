@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="footer-section">
         <p className="title">AschwinRecipeApp</p>
         <p>Aschwin's recipe App is a place where you can please your soul and tummy with delicious food recepies of all cuisine. And our service is absolutely free.</p>
-        <p>&copy; 2021 | All Rights Reserved</p>
+        <p>&copy; 2022 | All Rights Reserved</p>
       </div>
       <div className="footer-section">
         <p className="title">Contact Us</p>
