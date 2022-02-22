@@ -11,7 +11,7 @@ const Footer = () => {
       </div>
       <div className="footer-section">
         <p className="title">Contact Us</p>
-        <p>AschwinRecipeApp@gmail.com</p>
+        <p>AsReApp@gmail.com</p>
         <p>+12-345-678-90</p>
         <p>Mgr Nolenslaan 814</p>
       </div>

@@ -17,6 +17,7 @@ const HeroSection = () => {
   return (
     <div className="section hero">
       <div className="col typography">
+
         <h1 className="title">What is this app about</h1>
         <p className="info">This app is a place where you can please your soul and tummy with delicious food recepies of all cuisine. And our service is absolutely free. So start exploring now.</p>
         <Link to={"/recipes"}>

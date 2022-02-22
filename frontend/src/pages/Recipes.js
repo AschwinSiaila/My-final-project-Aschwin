@@ -7,6 +7,7 @@ import { API_URL } from "../utils/url";
 import recipes from "../reducers/recipes";
 import Footer from "../components/Footer";
 
+
 const Recipes = () => {
   const recipesItems = useSelector((store) => store.recipes.items);
   const accessToken = useSelector((store) => store.user.accessToken);
@@ -54,7 +55,7 @@ const Recipes = () => {
     };
     fetch(API_URL(`recipes/${itemId}`), options)
       .then((res) => res.json())
-      .then((data) => console.log(data));
+      .then((data) => getRecipes());
   };
 
   const onLovesIncrease = (itemId) => {
@@ -67,7 +68,7 @@ const Recipes = () => {
 
     fetch(API_URL(`recipes/${itemId}/loves`), options)
       .then((res) => res.json())
-      .then((data) => console.log(data));
+      .then((data) => getRecipes());
   };
 
   return (
